@@ -10,16 +10,24 @@
 
 int main(int argc, const char * argv[]) {
     
-    int i,n;
-    int sum=0;
+    int answer = 59;
+    int i, trial=0;
     
-    printf("input a number: ");
-    scanf("%i", &n);
-    
-    for (i=1; i<=n; i++)
-        sum += i;//summation
+    do
+    {
+        printf("input a number:");
+        scanf("%i", &i);
+        if (answer > i)
+            printf("low!\n");
+        else if (answer < i)
+            printf("high!\n");
         
-    printf("the sum result is %i\n", sum);
+        trial++;
+        
+    } while(i != answer);
+    
+    printf("Conglaturation, number of trial : %i\n", trial);
+    
     
     return 0;
 }
